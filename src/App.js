@@ -10,11 +10,20 @@ function App() {
     return (
       <>
       <button onClick={() => setFilterComponent('All')}>All</button>
-      <button onClick={() => setFilterComponent('Information')}>Information</button>
+      <button onClick={() => setFilterComponent('Informational')}>Information</button>
       <button onClick={() => setFilterComponent('Games')}>Games</button>
       <button onClick={() => setFilterComponent('Video')}>Video</button>
-      {filtered === 'All' ? (<div>{activities.filter(active => active.type === 'All').map(thing => 
-        (<div key={thing.id}>{thing.name}</div>))}</div>) : <></> }
+      {filtered === 'All' ? (<div>{activities.map(item => 
+        (<div key={item.id}>{item.name}</div>))}</div>) : <></> }
+      {filtered === 'Games' ? (<div>{activities.filter(
+        active => active.type === 'Games').map(item => 
+        (<div key={item.id}>{item.name}</div>))}</div>) : <></> }
+      {filtered === 'Informational' ? (<div>{activities.filter(
+        active => active.type === 'Informational').map(item => 
+        (<div key={item.id}>{item.name}</div>))}</div>) : <></> }
+      {filtered === 'Video' ? (<div>{activities.filter(
+        active => active.type === 'Video').map(item => 
+        (<div key={item.id}>{item.name}</div>))}</div>) : <></> }
       {/* {filtered === 'All' ? (<div>{activities.filter(type => type === 'All').map(filteredType => {
        (
           <div key={filteredType.name}>{filteredType}a aaaaa</div> 
@@ -22,7 +31,6 @@ function App() {
         )
       })
       } </div> ) : 'not' } */}
-      {filtered === 'Information' ? (<div> Hello is this Information </div>) : '' }
       </>
     );
 }
