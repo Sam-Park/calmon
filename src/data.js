@@ -14,7 +14,7 @@
 // 14. Pushups                            Informational
 // 15. What is COVID-19?           Video
 
-const activities = [{name:'Box Breathing', type:'All', id: 1}, 
+const activities = [{name:'Box Breathing', type:'Games', id: 1}, 
                 {name:'Calm Counting', type:'Games', id: 2},
                 {name:'Decoding Messages ', type:'Games', id: 3}, 
                 {name:'Going on an Adventure', type:'Games', id: 4}, 

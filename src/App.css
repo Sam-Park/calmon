@@ -12,10 +12,7 @@
 .button-container {
   align-self: center;
   margin: 25px 0;
-}
-.button:focus {
-  background-color: black;
-  color: white;
+  justify-content: space-around;
 }
 
 .activities-container {
